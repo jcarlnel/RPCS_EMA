@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="options">
+        <item>Very Poor</item>
+        <item>Poor</item>
+        <item>Acceptable</item>
+        <item>Good</item>
+        <item>Very Good</item>
+    </string-array>
+
+    <string-array name="moods">
+        <item>Energetic</item>
+        <item>Helpless</item>
+        <item>Lonely</item>
+    </string-array>
+</resources>
