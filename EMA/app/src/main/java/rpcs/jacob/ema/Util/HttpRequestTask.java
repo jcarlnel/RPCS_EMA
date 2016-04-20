@@ -46,7 +46,7 @@ public abstract class HttpRequestTask extends AsyncTask<String, Void, JSONObject
         // set timeout to 5 sec
         httpURLConnection.setConnectTimeout(5000);
         try {
-            httpURLConnection.setRequestMethod("GET");
+            httpURLConnection.setRequestMethod("POST");
         } catch (ProtocolException e) {
             e.printStackTrace();
             return fail(e.toString());
@@ -63,7 +63,7 @@ public abstract class HttpRequestTask extends AsyncTask<String, Void, JSONObject
             return fail(e.toString());
         }
         if (responseCode != 200) {
-            return fail("responseCode != 200");
+            return fail("responseCode = " + Integer.toString(responseCode));
         }
         BufferedReader in = null;
         try {
@@ -113,6 +113,13 @@ public abstract class HttpRequestTask extends AsyncTask<String, Void, JSONObject
 
     // utility
     static protected String getUrl(String page, Map<String, String> params) {
+        // POST /sensors/form
+        //    { questions: [ { sensorID: 'question1': value: 'some_value' } ]  }
+
+        // POST /values
+        //     { sensorID: 'question1': value: 'some_value' }
+        //     { sensorID: 'question2': value: 'some_value' }
+        //     { sensorID: 'question3': value: 'some_value' }
         StringBuffer address = new StringBuffer();
         address.append("http://");
         address.append(MyGlobal.host);
@@ -132,6 +139,7 @@ public abstract class HttpRequestTask extends AsyncTask<String, Void, JSONObject
             address.append("=");
             address.append(entry.getValue());
         }
+        System.out.println(address.toString());
         return address.toString();
     }
 }

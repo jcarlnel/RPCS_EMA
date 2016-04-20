@@ -12,6 +12,22 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <service
+        android:name="rpcs.jacob.ema.notifications.NotificationIntentService"
+        android:enabled="true"
+        android:exported="false" />
+
+    <receiver android:name="rpcs.jacob.ema.broadcast_receivers.NotificationReceiver" />
+    <receiver android:name="rpcs.jacob.ema.broadcast_receivers.NotificationServiceStarterReceiver" >
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+            <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            <action android:name="android.intent.action.TIME_SET" />
+        </intent-filter>
+    </receiver>
 
     <application
         android:allowBackup="true"
@@ -35,6 +51,8 @@
         <activity android:name="rpcs.jacob.ema.Activity.AccountHomeActivity" >
         </activity>
         <activity android:name="rpcs.jacob.ema.Activity.SurveyActivity" >
+        </activity>
+        <activity android:name="rpcs.jacob.ema.Activity.SurveyNotification" >
         </activity>
     </application>
 

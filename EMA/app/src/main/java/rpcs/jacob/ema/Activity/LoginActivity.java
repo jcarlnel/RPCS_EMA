@@ -4,7 +4,13 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
 import android.content.Loader;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -12,6 +18,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v7.app.NotificationCompat;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -74,6 +81,9 @@ public class LoginActivity extends Activity {
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    private int notificationId;
+    private NotificationManager myNotificationManager;
+    private int numMessagesOne;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +95,7 @@ public class LoginActivity extends Activity {
         buttonSignup.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
+                        displayNotification();
                         startActivity(new LoadSignupIntent(getApplicationContext()));
                     }
                 }
@@ -108,6 +119,7 @@ public class LoginActivity extends Activity {
 
                         //EditText editHost = (EditText)findViewById(R.id.editLoginHost);
                         //MyGlobal.host = editHost.getText().toString();
+
                         startActivity(new AccountHomeIntent(LoginActivity.this));
                         //new LoginTask(getApplicationContext()).execute();
                     }
@@ -405,6 +417,45 @@ public class LoginActivity extends Activity {
             mAuthTask = null;
             showProgress(false);
         }
+    }
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+    protected void displayNotification() {
+
+        // Invoking the default notification service
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
+        mBuilder.setContentTitle("New Survey to Take");
+        mBuilder.setContentText("Please go take your Mood and Pain survey");
+        mBuilder.setTicker("Explicit: New Message Received!");
+        mBuilder.setSmallIcon(R.drawable.ic_launcher);
+
+        // Increase notification number every time a new notification arrives
+        mBuilder.setNumber(++numMessagesOne);
+
+        // Creates an explicit intent for an Activity in your app
+        Intent resultIntent = new Intent(this, SurveyActivity.class);
+        resultIntent.putExtra("notificationId", notificationId);
+
+        //This ensures that navigating backward from the Activity leads out of the app to Home page
+        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+
+        // Adds the back stack for the Intent
+        stackBuilder.addParentStack(SurveyActivity.class);
+
+        // Adds the Intent that starts the Activity to the top of the stack
+        stackBuilder.addNextIntent(resultIntent);
+        PendingIntent resultPendingIntent =
+                stackBuilder.getPendingIntent(
+                        0,
+                        PendingIntent.FLAG_ONE_SHOT //can only be used once
+                );
+        // start the activity when the user clicks the notification text
+        mBuilder.setContentIntent(resultPendingIntent);
+
+        myNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+
+        // pass the Notification object to the system
+        myNotificationManager.notify(notificationId, mBuilder.build());
     }
 }
 

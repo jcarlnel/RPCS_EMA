@@ -1,10 +1,14 @@
 [
     {
-        "merged": "/Users/jacobnelson/Downloads/EMA/C:\\Users\\Jacobs\\AndroidStudioProjects\\EMA\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
-        "source": "/Users/jacobnelson/Downloads/EMA/C:\\Users\\Jacobs\\AndroidStudioProjects\\EMA\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-v23\\abc_control_background_material.xml"
+        "merged": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
+        "source": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-v23/abc_control_background_material.xml"
     },
     {
         "merged": "/Users/jacobnelson/Downloads/EMA/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
         "source": "/Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-v23/abc_control_background_material.xml"
+    },
+    {
+        "merged": "/Users/jacobnelson/Downloads/EMA/C:\\Users\\Jacobs\\AndroidStudioProjects\\EMA\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
+        "source": "/Users/jacobnelson/Downloads/EMA/C:\\Users\\Jacobs\\AndroidStudioProjects\\EMA\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.1\\res\\drawable-v23\\abc_control_background_material.xml"
     }
 ]

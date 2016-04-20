@@ -4,6 +4,10 @@
         "source": "/Users/jacobnelson/Downloads/EMA/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
+        "source": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/jacobnelson/Downloads/EMA/C:\\Users\\Jacobs\\AndroidStudioProjects\\EMA\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
         "source": "/Users/jacobnelson/Downloads/EMA/C:\\Users\\Jacobs\\AndroidStudioProjects\\EMA\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     }

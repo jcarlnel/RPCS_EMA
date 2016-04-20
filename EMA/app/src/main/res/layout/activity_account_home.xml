@@ -13,7 +13,6 @@
         android:clickable="true"
         android:gravity="center|center_vertical|center_horizontal"
         android:singleLine="false"
-        android:layout_alignCenter="@+id/welcomeText"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

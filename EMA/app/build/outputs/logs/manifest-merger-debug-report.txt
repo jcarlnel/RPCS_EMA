@@ -1,92 +1,134 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:2:1-39:12
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:2:1-58:12
 	package
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:3:5-29
-		INJECTED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:3:5-29
+		INJECTED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:6:5-71
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:6:5-71
 	android:name
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:6:22-68
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:6:22-68
 uses-permission#android.permission.READ_PROFILE
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:7:5-71
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:7:5-71
 	android:name
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:7:22-68
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:7:22-68
 uses-permission#android.permission.READ_CONTACTS
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:8:5-72
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:8:5-72
 	android:name
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:8:22-69
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:8:22-69
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:9:22-65
+uses-permission#android.permission.INTERNET
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:10:5-66
+	android:name
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:10:22-64
 application
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:10:5-37:19
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:12:5-42:19
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:13:9-41
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:15:9-41
 	android:supportsRtl
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:16:9-35
 	android:allowBackup
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:13:9-35
 	android:icon
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:12:9-43
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:14:9-43
 	android:theme
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:15:9-40
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:17:9-40
 activity#rpcs.jacob.ema.Activity.LoginActivity
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:16:9-24:20
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:18:9-26:20
 	android:label
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:18:13-45
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:20:13-45
 	android:name
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:17:13-51
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:19:13-51
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:19:13-23:29
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:20:17-69
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:20:25-66
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:22:17-77
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:24:27-74
 activity#rpcs.jacob.ema.Activity.SignupActivity
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:26:9-29:20
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:28:9-31:20
 	android:label
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:27:13-32
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:29:13-32
 	android:name
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:26:19-58
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:28:19-58
 activity#rpcs.jacob.ema.Activity.AccountHomeActivity
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:31:9-33:20
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:33:9-35:20
 	android:name
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:31:19-63
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:33:19-63
 activity#rpcs.jacob.ema.Activity.SurveyActivity
-ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:34:9-36:20
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:36:9-38:20
 	android:name
-		ADDED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml:34:19-58
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:36:19-58
+activity#rpcs.jacob.ema.Activity.SurveyNotification
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:39:9-41:20
+	android:name
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:39:19-62
+service#rpcs.jacob.ema.notifications.NotificationIntentService
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:44:5-47:36
+	android:enabled
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:46:9-31
+	android:exported
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:47:9-33
+	android:name
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:45:9-64
+receiver#rpcs.jacob.ema.broadcast_receivers.NotificationReceiver
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:49:5-74
+	android:name
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:49:15-71
+receiver#rpcs.jacob.ema.broadcast_receivers.NotificationServiceStarterReceiver
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:50:5-56:16
+	android:name
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:50:15-85
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.TIMEZONE_CHANGED+android.intent.action.TIME_SET
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:51:9-55:25
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:52:13-75
+	android:name
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:52:21-72
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:53:13-77
+	android:name
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:53:21-74
+action#android.intent.action.TIME_SET
+ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:54:13-69
+	android:name
+		ADDED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml:54:21-66
 uses-sdk
-INJECTED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+INJECTED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
-		INJECTED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/jacobnelson/Downloads/EMA/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/AndroidManifest.xml
