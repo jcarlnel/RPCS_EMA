@@ -14,20 +14,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <service
-        android:name="rpcs.jacob.ema.notifications.NotificationIntentService"
-        android:enabled="true"
-        android:exported="false" />
-
-    <receiver android:name="rpcs.jacob.ema.broadcast_receivers.NotificationReceiver" />
-    <receiver android:name="rpcs.jacob.ema.broadcast_receivers.NotificationServiceStarterReceiver" >
-        <intent-filter>
-            <action android:name="android.intent.action.BOOT_COMPLETED" />
-            <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-            <action android:name="android.intent.action.TIME_SET" />
-        </intent-filter>
-    </receiver>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -54,6 +41,19 @@
         </activity>
         <activity android:name="rpcs.jacob.ema.Activity.SurveyNotification" >
         </activity>
+        <activity android:name="rpcs.jacob.ema.Activity.MoodSurveyActivity" />
+        <activity android:name="rpcs.jacob.ema.Activity.PainSurveyActivity" />
+        <activity android:name="rpcs.jacob.ema.Activity.NutritionSurveyActivity" />
+        <activity android:name="rpcs.jacob.ema.Activity.SocialSurveyActivity" />
+
+        <receiver android:name="rpcs.jacob.ema.Util.NotificationReceiver" >
+            <intent-filter>
+                <action android:name="NotificationReceiverActivity" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

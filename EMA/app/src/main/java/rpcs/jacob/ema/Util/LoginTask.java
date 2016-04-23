@@ -28,25 +28,13 @@ public class LoginTask extends HttpRequestTask {
     @Override
     protected String getUrl() {
         TreeMap<String, String> params = new TreeMap<String, String>();
-        params.put("username", MyGlobal.me.getName());
-        params.put("password", MyGlobal.me.getPassword());
-        return getUrl("login", params);
+        //params.put("username", MyGlobal.me.getName());
+        //params.put("password", MyGlobal.me.getPassword());
+        return getUrl("values", params);
     }
 
     @Override
     protected void onPostExecute(JSONObject json) {
-        try {
-            if (json.getString("result").equals("fail")) {
-                Toast.makeText(context, json.get("reason").toString(), Toast.LENGTH_LONG).show();
-                return;
-            }
-            new AccountHomeTask(context).execute();
-        } catch (JSONException e) {
-            e.printStackTrace();
-            Toast.makeText(context, e.toString(), Toast.LENGTH_LONG).show();
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(context, e.toString(), Toast.LENGTH_LONG).show();
-        }
+        new AccountHomeTask(context).execute();
     }
 }

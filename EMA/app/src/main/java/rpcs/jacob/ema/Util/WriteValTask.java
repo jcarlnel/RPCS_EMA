@@ -18,10 +18,12 @@ public class WriteValTask extends HttpRequestTask {
 
     private Context context;
     private int val;
+    private String id;
 
-    public WriteValTask(Context context, int val) {
+    public WriteValTask(Context context, String id, int val) {
         this.context = context;
         this.val = val;
+        this.id = id;
     }
 
     protected String getWebPage() {
@@ -31,7 +33,7 @@ public class WriteValTask extends HttpRequestTask {
     @Override
     protected String getUrl() {
         TreeMap<String, String> params = new TreeMap<String, String>();
-        params.put("sensor_id", "question");
+        params.put("sensor_id", id);
         params.put("value", String.valueOf(val));
         return getUrl(getWebPage(), params);
     }

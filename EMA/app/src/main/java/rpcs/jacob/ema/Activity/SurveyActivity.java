@@ -43,7 +43,7 @@ public class SurveyActivity extends Activity {
                     public void onClick(View v) {
                         SeekBar sb = (SeekBar)findViewById(R.id.seekBarSleep);
                         int val = sb.getProgress();
-                        new WriteValTask(getApplicationContext(), val).execute();
+                        new WriteValTask(getApplicationContext(), "val", val).execute();
                         startActivity(new AccountHomeIntent(SurveyActivity.this));
                     }
                 }

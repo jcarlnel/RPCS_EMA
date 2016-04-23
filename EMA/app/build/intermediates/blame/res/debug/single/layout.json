@@ -28,6 +28,10 @@
         "source": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/res/layout/activity_account_home.xml"
     },
     {
+        "merged": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/res/merged/debug/layout/activity_nutrition_survey.xml",
+        "source": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/res/layout/activity_nutrition_survey.xml"
+    },
+    {
         "merged": "/Users/jacobnelson/Downloads/EMA/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
         "source": "/Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/support_simple_spinner_dropdown_item.xml"
     },
@@ -170,6 +174,10 @@
     {
         "merged": "/Users/jacobnelson/Downloads/EMA/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
         "source": "/Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/res/merged/debug/layout/activity_pain_survey.xml",
+        "source": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/res/layout/activity_pain_survey.xml"
     },
     {
         "merged": "/Users/jacobnelson/Downloads/EMA/C:\\Users\\Jacobs\\AndroidStudioProjects\\EMA\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
@@ -358,6 +366,14 @@
     {
         "merged": "/Users/jacobnelson/Downloads/EMA/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
         "source": "/Users/jacobnelson/Downloads/EMA/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/res/merged/debug/layout/account_home_none_pending.xml",
+        "source": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/res/layout/account_home_none_pending.xml"
+    },
+    {
+        "merged": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/res/merged/debug/layout/activity_mood_survey.xml",
+        "source": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/res/layout/activity_mood_survey.xml"
     },
     {
         "merged": "/Users/jacobnelson/Downloads/EMA/C:\\Users\\Jacobs\\AndroidStudioProjects\\EMA\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
@@ -570,6 +586,10 @@
     {
         "merged": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
         "source": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/res/merged/debug/layout/activity_social_survey.xml",
+        "source": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/src/main/res/layout/activity_social_survey.xml"
     },
     {
         "merged": "/Users/jacobnelson/Documents/rpcs/RPCS_EMA/EMA/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",

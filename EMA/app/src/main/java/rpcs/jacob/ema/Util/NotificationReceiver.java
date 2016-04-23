@@ -1,74 +1,112 @@
 package rpcs.jacob.ema.Util;
 
+
 import android.app.AlarmManager;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.content.WakefulBroadcastReceiver;
-import android.util.Log;
 
+
+import android.annotation.TargetApi;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.Service;
+import android.app.TaskStackBuilder;
+import android.content.Context;
+import android.content.Intent;
+import android.media.RingtoneManager;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.Message;
+import android.support.v4.app.NotificationCompat;
+import android.widget.Toast;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import rpcs.jacob.ema.Intents.NotificationIntentService;
+import rpcs.jacob.ema.Activity.MoodSurveyActivity;
+import rpcs.jacob.ema.Activity.NutritionSurveyActivity;
+import rpcs.jacob.ema.Entities.MyGlobal;
+import rpcs.jacob.ema.R;
 
 /**
  * Created by jacobnelson on 4/20/16.
  */
-public class NotificationReceiver extends WakefulBroadcastReceiver{
+public class NotificationReceiver extends BroadcastReceiver {
 
-    private static final String ACTION_START_NOTIFICATION_SERVICE = "ACTION_START_NOTIFICATION_SERVICE";
-    private static final String ACTION_DELETE_NOTIFICATION = "ACTION_DELETE_NOTIFICATION";
-    private static final int NOTIFICATIONS_INTERVAL_IN_HOURS = 24;
-
-    public static void setupAlarm(Context context) {
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        PendingIntent alarmIntent = getStartPendingIntent(context);
-        Calendar alarmStartTime = Calendar.getInstance();
-        alarmStartTime.set(Calendar.HOUR_OF_DAY, 15);
-        alarmStartTime.set(Calendar.MINUTE, 40);
-        alarmStartTime.set(Calendar.SECOND, 0);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,
-                alarmStartTime.getTimeInMillis(),
-                NOTIFICATIONS_INTERVAL_IN_HOURS * AlarmManager.INTERVAL_HOUR,
-                alarmIntent);
-    }
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        String action = intent.getAction();
-        Intent serviceIntent = null;
-        if (ACTION_START_NOTIFICATION_SERVICE.equals(action)) {
-            Log.i(getClass().getSimpleName(), "onReceive from alarm, starting notification service");
-            serviceIntent = NotificationIntentService.createIntentStartNotificationService(context);
-        } else if (ACTION_DELETE_NOTIFICATION.equals(action)) {
-            Log.i(getClass().getSimpleName(), "onReceive delete notification action, starting notification service to handle delete");
-            serviceIntent = NotificationIntentService.createIntentDeleteNotification(context);
+        if(System.currentTimeMillis() > 19 * 60 * 60 * 1000){
+            if(MyGlobal.surveys == 1){
+                MyGlobal.surveys = 2;
+            }
+            else{
+                MyGlobal.surveys = 1;
+            }
+        }
+        else{
+            MyGlobal.surveys = 1;
         }
 
-        if (serviceIntent != null) {
-            startWakefulService(context, serviceIntent);
+
+
+        showNotification(context);
+
+    }
+
+    private void showNotification(Context context) {
+
+        PendingIntent contentIntent = null;
+        if(MyGlobal.surveys == 1 && System.currentTimeMillis() > 19 * 60 * 60 * 1000) {
+            contentIntent = PendingIntent.getActivity(context, 0,
+                    new Intent(context, NutritionSurveyActivity.class), 0);
         }
+        else{
+          contentIntent = PendingIntent.getActivity(context, 0,
+                    new Intent(context, MoodSurveyActivity.class), 0);
+        }
+
+
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(context)
+                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setContentTitle("It is time for a survey!")
+                        .setContentText("Please tap this notification to complete your survey");
+        mBuilder.setContentIntent(contentIntent);
+        mBuilder.setDefaults(Notification.DEFAULT_SOUND);
+        mBuilder.setAutoCancel(true);
+        NotificationManager mNotificationManager =
+                (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        mNotificationManager.notify(1, mBuilder.build());
+
+        setAlarm(context);
+
     }
 
-    private static long getTriggerAt(Date now) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(now);
-        //calendar.add(Calendar.HOUR, NOTIFICATIONS_INTERVAL_IN_HOURS);
-        return calendar.getTimeInMillis();
-    }
+    private void setAlarm(Context context) {
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        Intent alarmIntent = new Intent();
+        alarmIntent.setAction("NotificationReceiverActivity");
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, alarmIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
-    private static PendingIntent getStartPendingIntent(Context context) {
-        Intent intent = new Intent(context, NotificationReceiver.class);
-        intent.setAction(ACTION_START_NOTIFICATION_SERVICE);
-        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-    }
+        Calendar alarmStartTime = Calendar.getInstance();
+        alarmStartTime.setTimeInMillis(System.currentTimeMillis());
 
-    public static PendingIntent getDeleteIntent(Context context) {
-        Intent intent = new Intent(context, NotificationReceiver.class);
-        intent.setAction(ACTION_DELETE_NOTIFICATION);
-        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        if(System.currentTimeMillis() > 19 * 60 * 60 * 1000){
+            alarmStartTime.add(Calendar.HOUR, 12);
+        }
+        else{
+            alarmStartTime.add(Calendar.HOUR, 4);
+        }
+
+        alarmManager.set(AlarmManager.RTC_WAKEUP, alarmStartTime.getTimeInMillis(), pendingIntent);
+        Toast.makeText(context, "Alarm Set", Toast.LENGTH_LONG).show();
     }
 }

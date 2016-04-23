@@ -74,7 +74,7 @@ public class LoginActivity extends Activity {
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
-    private UserLoginTask mAuthTask = null;
+    //private UserLoginTask mAuthTask = null;
 
     // UI references.
     private AutoCompleteTextView mEmailView;
@@ -95,7 +95,6 @@ public class LoginActivity extends Activity {
         buttonSignup.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        displayNotification();
                         startActivity(new LoadSignupIntent(getApplicationContext()));
                     }
                 }
@@ -157,7 +156,7 @@ public class LoginActivity extends Activity {
             //getLoaderManager().initLoader(0, null, this);
         } else if (Build.VERSION.SDK_INT >= 8) {
             // Use AccountManager (API 8+)
-            new SetupEmailAutoCompleteTask().execute(null, null);
+            //new SetupEmailAutoCompleteTask().execute(null, null);
         }
     }
 
@@ -203,11 +202,8 @@ public class LoginActivity extends Activity {
      * errors are presented and no actual login attempt is made.
      */
     private void attemptLogin() {
-        if (mAuthTask != null) {
-            return;
-        }
-
-        // Reset errors.
+        return;
+        /*Reset errors.
         mEmailView.setError(null);
         mPasswordView.setError(null);
 
@@ -244,9 +240,9 @@ public class LoginActivity extends Activity {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
-            mAuthTask = new UserLoginTask(email, password);
-            mAuthTask.execute((Void) null);
-        }
+            //mAuthTask = new UserLoginTask(email, password);
+            //mAuthTask.execute((Void) null);
+        }*/
     }
 
     private boolean isEmailValid(String email) {
@@ -401,7 +397,6 @@ public class LoginActivity extends Activity {
 
         @Override
         protected void onPostExecute(final Boolean success) {
-            mAuthTask = null;
             showProgress(false);
 
             if (success) {
@@ -414,48 +409,10 @@ public class LoginActivity extends Activity {
 
         @Override
         protected void onCancelled() {
-            mAuthTask = null;
             showProgress(false);
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-    protected void displayNotification() {
 
-        // Invoking the default notification service
-        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
-        mBuilder.setContentTitle("New Survey to Take");
-        mBuilder.setContentText("Please go take your Mood and Pain survey");
-        mBuilder.setTicker("Explicit: New Message Received!");
-        mBuilder.setSmallIcon(R.drawable.ic_launcher);
-
-        // Increase notification number every time a new notification arrives
-        mBuilder.setNumber(++numMessagesOne);
-
-        // Creates an explicit intent for an Activity in your app
-        Intent resultIntent = new Intent(this, SurveyActivity.class);
-        resultIntent.putExtra("notificationId", notificationId);
-
-        //This ensures that navigating backward from the Activity leads out of the app to Home page
-        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-
-        // Adds the back stack for the Intent
-        stackBuilder.addParentStack(SurveyActivity.class);
-
-        // Adds the Intent that starts the Activity to the top of the stack
-        stackBuilder.addNextIntent(resultIntent);
-        PendingIntent resultPendingIntent =
-                stackBuilder.getPendingIntent(
-                        0,
-                        PendingIntent.FLAG_ONE_SHOT //can only be used once
-                );
-        // start the activity when the user clicks the notification text
-        mBuilder.setContentIntent(resultPendingIntent);
-
-        myNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
-        // pass the Notification object to the system
-        myNotificationManager.notify(notificationId, mBuilder.build());
-    }
 }
 

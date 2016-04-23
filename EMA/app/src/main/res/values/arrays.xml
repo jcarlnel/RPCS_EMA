@@ -8,9 +8,69 @@
         <item>Very Good</item>
     </string-array>
 
+    <string-array name="socialNumbers">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5+</item>
+    </string-array>
+
+    <string-array name="water">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8+</item>
+    </string-array>
+
+    <string-array name="nonwater">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8+</item>
+    </string-array>
+
+    <string-array name="meals">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3+</item>
+    </string-array>
+
+    <string-array name="snacks">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3+</item>
+    </string-array>
+
     <string-array name="moods">
+        <item>Tired</item>
         <item>Energetic</item>
-        <item>Helpless</item>
+        <item>Happy</item>
+        <item>Miserable</item>
+        <item>Sad</item>
+        <item>Content</item>
+        <item>Tense</item>
+        <item>Frustrated</item>
+        <item>Angry</item>
+        <item>Annoyed</item>
+        <item>Bored</item>
         <item>Lonely</item>
+        <item>Confused</item>
+        <item>Hopeless</item>
+        <item>Anxious</item>
+        <item>Helpless</item>
     </string-array>
 </resources>

@@ -19,13 +19,11 @@ public class ListViewAdapter extends ArrayAdapter<Model>{
         Context context;
 public ListViewAdapter(Context context, Model[] resource) {
         super(context, R.layout.checkboxrow,resource);
-        // TODO Auto-generated constructor stub
         this.context = context;
         this.modelItems = resource;
         }
 @Override
 public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
         LayoutInflater inflater = ((Activity)context).getLayoutInflater();
         convertView = inflater.inflate(R.layout.checkboxrow, parent, false);
         TextView name = (TextView) convertView.findViewById(R.id.textView1);

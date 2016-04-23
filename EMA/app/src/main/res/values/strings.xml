@@ -19,5 +19,16 @@
     <string name="Question2">What is your general Mood?</string>
     <string name="Question3">Do you feel ill today?</string>
     <string name="Question4">How are you feeling currently? (Select all that apply)</string>
+    <string name="Question5">Where is your pain located? (Select all that apply)</string>
+    <string name="Question6">How many 8-ounce glasses of water did you consume today?</string>
+    <string name="Question7">How many 8-ounce glasses of fluid that are not water did you consume today? Please include coffee, juice, soda, alcohol, etc.</string>
+    <string name="Question8">How many meals did you consume today?</string>
+    <string name="Question9">How many times did you snack today?</string>
+    <string name="Question10">How many friends did you speak with on the phone today?</string>
+    <string name="Question11">How many family members did you speak with on the phone today?</string>
+    <string name="Question12">How many visitors did you have today? (exclude care coordinators and providers)</string>
+    <string name="Question13">Did you leave the house today?</string>
+    <string name="Question14">Did you have any unplanned social interactions today?</string>
+
 
 </resources>
