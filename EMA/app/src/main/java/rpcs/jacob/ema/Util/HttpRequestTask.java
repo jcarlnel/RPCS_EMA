@@ -63,7 +63,7 @@ public abstract class HttpRequestTask extends AsyncTask<String, Void, JSONObject
             return fail(e.toString());
         }
         if (responseCode != 200) {
-            return fail("responseCode = " + Integer.toString(responseCode));
+            return fail("");
         }
         BufferedReader in = null;
         try {

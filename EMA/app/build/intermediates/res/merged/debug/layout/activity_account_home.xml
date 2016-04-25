@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:text="@string/surveyButton"
         android:id="@+id/surveyButton"
+        android:padding="5dp"
         android:layout_gravity="center"
         android:clickable="true"
         android:gravity="center|center_vertical|center_horizontal"
@@ -23,6 +24,7 @@
         android:text="Large Text"
         android:id="@+id/welcomeText"
         android:layout_alignParentTop="true"
+        android:padding="5dp"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -31,6 +33,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Please take your Mood Survey"
         android:id="@+id/textView"
+        android:padding="5dp"
         android:layout_above="@+id/surveyButton"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

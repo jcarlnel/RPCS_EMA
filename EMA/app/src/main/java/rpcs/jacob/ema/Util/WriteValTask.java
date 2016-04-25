@@ -35,6 +35,7 @@ public class WriteValTask extends HttpRequestTask {
         TreeMap<String, String> params = new TreeMap<String, String>();
         params.put("sensor_id", id);
         params.put("value", String.valueOf(val));
+        params.put("user_id", "571b97467391f8524f9d96fc");//MyGlobal.me.getName());
         return getUrl(getWebPage(), params);
     }
 
